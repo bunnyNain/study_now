@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("admin123");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const [_, navigate] = useLocation();
   
   const { login, isLoggingIn, loginError } = useAuth();
   const { toast } = useToast();
@@ -25,6 +27,7 @@ export default function LoginPage() {
           title: "Login Successful",
           description: "Welcome back! Redirecting to dashboard...",
         });
+        navigate("/dashboard");
       },
       onError: (error: any) => {
         toast({
