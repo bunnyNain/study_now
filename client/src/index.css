@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom color variables for the student management system */
+  --primary-50: hsl(207, 89%, 95%);
+  --primary-100: hsl(207, 89%, 86%);
+  --primary-500: hsl(207, 90%, 54%);
+  --primary-600: hsl(207, 90%, 48%);
+  --primary-700: hsl(207, 86%, 40%);
+  
+  --success-100: hsl(122, 39%, 91%);
+  --success-500: hsl(122, 39%, 49%);
+  --success-600: hsl(122, 47%, 41%);
+  --success-800: hsl(122, 47%, 29%);
+  
+  --warning-100: hsl(36, 100%, 91%);
+  --warning-500: hsl(36, 100%, 50%);
+  --warning-600: hsl(36, 91%, 47%);
+  --warning-800: hsl(36, 91%, 29%);
+  
+  --error-100: hsl(4, 93%, 91%);
+  --error-500: hsl(4, 90%, 58%);
+  --error-600: hsl(4, 90%, 52%);
+  --error-800: hsl(4, 90%, 34%);
+  
+  --gray-50: hsl(210, 40%, 98%);
+  --gray-100: hsl(210, 40%, 96%);
+  --gray-200: hsl(214, 32%, 91%);
+  --gray-300: hsl(213, 27%, 84%);
+  --gray-400: hsl(215, 20%, 65%);
+  --gray-500: hsl(215, 16%, 47%);
+  --gray-600: hsl(215, 19%, 35%);
+  --gray-700: hsl(215, 25%, 27%);
+  --gray-800: hsl(217, 33%, 17%);
+  --gray-900: hsl(222, 84%, 5%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom utility classes */
+.text-primary-50 { color: hsl(207, 89%, 95%); }
+.text-primary-100 { color: hsl(207, 89%, 86%); }
+.text-primary-500 { color: hsl(207, 90%, 54%); }
+.text-primary-600 { color: hsl(207, 90%, 48%); }
+.text-primary-700 { color: hsl(207, 86%, 40%); }
+
+.bg-primary-50 { background-color: hsl(207, 89%, 95%); }
+.bg-primary-100 { background-color: hsl(207, 89%, 86%); }
+.bg-primary-500 { background-color: hsl(207, 90%, 54%); }
+.bg-primary-600 { background-color: hsl(207, 90%, 48%); }
+.bg-primary-700 { background-color: hsl(207, 86%, 40%); }
+
+.text-success-500 { color: hsl(122, 39%, 49%); }
+.text-success-600 { color: hsl(122, 47%, 41%); }
+.text-success-800 { color: hsl(122, 47%, 29%); }
+.bg-success-100 { background-color: hsl(122, 39%, 91%); }
+.bg-success-500 { background-color: hsl(122, 39%, 49%); }
+.bg-success-600 { background-color: hsl(122, 47%, 41%); }
+
+.text-warning-500 { color: hsl(36, 100%, 50%); }
+.text-warning-600 { color: hsl(36, 91%, 47%); }
+.text-warning-800 { color: hsl(36, 91%, 29%); }
+.bg-warning-100 { background-color: hsl(36, 100%, 91%); }
+.bg-warning-500 { background-color: hsl(36, 100%, 50%); }
+.bg-warning-600 { background-color: hsl(36, 91%, 47%); }
+
+.text-error-500 { color: hsl(4, 90%, 58%); }
+.text-error-600 { color: hsl(4, 90%, 52%); }
+.text-error-800 { color: hsl(4, 90%, 34%); }
+.bg-error-100 { background-color: hsl(4, 93%, 91%); }
+.bg-error-500 { background-color: hsl(4, 90%, 58%); }
+.bg-error-600 { background-color: hsl(4, 90%, 52%); }
+
+.text-gray-50 { color: hsl(210, 40%, 98%); }
+.text-gray-100 { color: hsl(210, 40%, 96%); }
+.text-gray-400 { color: hsl(215, 20%, 65%); }
+.text-gray-500 { color: hsl(215, 16%, 47%); }
+.text-gray-600 { color: hsl(215, 19%, 35%); }
+.text-gray-700 { color: hsl(215, 25%, 27%); }
+.text-gray-900 { color: hsl(222, 84%, 5%); }
+
+.bg-gray-50 { background-color: hsl(210, 40%, 98%); }
+.bg-gray-100 { background-color: hsl(210, 40%, 96%); }
+.bg-gray-200 { background-color: hsl(214, 32%, 91%); }
+
+.border-gray-200 { border-color: hsl(214, 32%, 91%); }
+.border-gray-300 { border-color: hsl(213, 27%, 84%); }
+
+.hover\:bg-primary-700:hover { background-color: hsl(207, 86%, 40%); }
+.hover\:text-primary-600:hover { color: hsl(207, 90%, 48%); }
+.hover\:text-primary-700:hover { color: hsl(207, 86%, 40%); }
+.hover\:bg-gray-50:hover { background-color: hsl(210, 40%, 98%); }
+.hover\:bg-gray-100:hover { background-color: hsl(210, 40%, 96%); }
+.hover\:text-gray-600:hover { color: hsl(215, 19%, 35%); }
+.hover\:text-gray-700:hover { color: hsl(215, 25%, 27%); }
+.hover\:text-error-600:hover { color: hsl(4, 90%, 52%); }
+
+.focus\:ring-primary-200:focus { --tw-ring-color: hsl(207, 73%, 82%); }
+.focus\:ring-primary-500:focus { --tw-ring-color: hsl(207, 90%, 54%); }
